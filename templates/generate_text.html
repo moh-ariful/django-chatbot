@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1>Diskusikan dengan kami: </h1>
+    <p>{{ message }}</p>
+
+    <form method="POST" action="{% url 'generate_text' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="prompt">Enter a prompt:</label>
+            <input type="text" class="form-control" id="prompt" name="prompt">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+</div>
+
+{% endblock content %}
