@@ -1,12 +1,12 @@
 from django.shortcuts import render
 import requests
 import openai
-openai.api_key = "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"
+openai.api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 
 def index(request):
     # Pastikan untuk mengganti `api_key` dengan API key yang Anda miliki
-    api_key = "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"
+    api_key = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxyyyyyyyyyyyyyyyyyyyyyyyyyy"
     headers = {"Authorization": f"Bearer {api_key}"}
     endpoint = "https://api.openai.com/v1/images/generations"
 
