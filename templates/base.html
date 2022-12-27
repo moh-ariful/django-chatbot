@@ -8,8 +8,8 @@
   </head>
   <body>
     <!-- Buat navbar dengan menggunakan class "navbar" -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Diskusi Dengan Django Chat</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,21 +17,13 @@
       <ul class="navbar-nav">
         <!-- Buat menu Home -->
         <li class="nav-item active">
-          <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
         </li>
-        <!-- Buat menu About -->
+        <!-- Buat menu Chat -->
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'about' %}">About</a>
+          <a class="nav-link active" href="{% url 'generate_text' %}">Diskusi</a>
         </li>
-        <!-- Buat menu Contact -->
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'generate_text' %}">Diskusi</a>
-        </li>
-        <!-- Buat menu Diskusi -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">Test</a>
-        </li>
-      </ul>
+
     </div>
   </nav>
     {% block content %}
