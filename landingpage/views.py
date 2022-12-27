@@ -35,7 +35,7 @@ def index(request):
     return render(request, "index.html", {"image_url": image_url})
 
 
-def generate_text(request):
+def diskusi(request):
     if request.method == "POST":
         prompt = request.POST.get("prompt")
         model_engine = "text-davinci-002"
@@ -49,6 +49,6 @@ def generate_text(request):
         )
 
         message = completions.choices[0].text
-        return render(request, "generate_text.html", {"message": message})
+        return render(request, "diskusi.html", {"message": message})
     else:
-        return render(request, "generate_text.html")
+        return render(request, "diskusi.html")
